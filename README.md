@@ -4,6 +4,19 @@
 
 This program simulates an economy with multiple agents. Each agent has a starting amount of goods and a VIP balance (which can be thought of as a credit card balance). Agents spend money randomly on each simulation step, and also pay off a random amount of debt.
  
+  ## Usage
+The Agent class represents an economic agent in the model, and has the following attributes:
+
+goods: the value of goods owned by the agent
+vip: the balance of the agent's virtual credit card
+rent: the cost of the agent's rent
+wage: the agent's weekly wage
+The Model class represents the economic model, and has the following methods:
+
+add_agent(agent): adds an Agent object to the model
+simulate(): simulates the economy for one week
+set_weekend(value): sets whether the current day is a weekend or not
+
  ## How to Use
 To run the simulation, run the agent.py file in Python. You can adjust the parameters of the simulation by modifying the Agent class and the Model class in the code.
 
@@ -15,3 +28,5 @@ After running the simulation, information about each agent's VIP balance, goods 
 To run the Python file, open a terminal or command prompt and navigate to the directory where the file is located. Then, run the following command:
 
 ### *python agent.py*
+
+
