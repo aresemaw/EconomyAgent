@@ -1,32 +1,48 @@
-# Agent-Based Economic Simulation
+# Economic Simulation
 
-## Background
+This is a Python program that simulates an economic scenario using a simple agent-based model. The program consists of three main components:
 
-This program simulates an economy with multiple agents. Each agent has a starting amount of goods and a VIP balance (which can be thought of as a credit card balance). Agents spend money randomly on each simulation step, and also pay off a random amount of debt.
- 
-  ## Usage
-The Agent class represents an economic agent in the model, and has the following attributes:
+1. **Agent Class**: The `Agent` class represents an economic agent and has the following attributes:
+   - `goods`: The value of goods owned by the agent.
+   - `vip`: The balance in the agent's VIP account.
+   - `wage`: The monthly wage received by the agent.
+   - `rent`: The monthly rent paid by the agent.
 
-goods: the value of goods owned by the agent
-vip: the balance of the agent's virtual credit card
-rent: the cost of the agent's rent
-wage: the agent's weekly wage
-The Model class represents the economic model, and has the following methods:
+   The class also contains methods to simulate agent behavior, such as spending money, paying off debt, paying rent, and receiving wages.
 
-add_agent(agent): adds an Agent object to the model
-simulate(): simulates the economy for one week
-set_weekend(value): sets whether the current day is a weekend or not
+2. **Model Class**: The `Model` class represents the economic model and contains a list of agents. It has the following functionalities:
+   - Adding agents to the model.
+   - Simulating the economy by iterating over the agents and simulating their behavior.
+   - Setting the weekend flag to determine the agent's spending behavior.
+   
+3. **GUI Class**: The `GUI` class provides a graphical user interface to interact with the economic simulation model. It uses the Tkinter library to create a window and display agent information. The GUI includes the following components:
+   - A label to display the title of the agent information section.
+   - A text box to display detailed information about each agent.
+   - A button to start the simulation.
+   
+The program creates an instance of the `Model` class, adds multiple agents to the model, and performs a simulation for three months. After the simulation, it prints information about the agents to the console. It then creates an instance of the `GUI` class, passing the model as a parameter, and runs the GUI.
 
- ## How to Use
-To run the simulation, run the agent.py file in Python. You can adjust the parameters of the simulation by modifying the Agent class and the Model class in the code.
+## How to Use
 
-To add agents, create an instance of the Agent class and pass in the starting values for goods, VIP balance, rent, and wage. Then add the agent to the Model class using the add_agent method.
+To use this program, follow these steps:
 
-To run the simulation, call the simulate method of the Model class. You can also set the weekend property of the Model class to True to simulate higher spending on weekends.
+1. Install Python: Make sure you have Python installed on your system.
 
-After running the simulation, information about each agent's VIP balance, goods value, rent value, and wage value will be printed to the console.
-To run the Python file, open a terminal or command prompt and navigate to the directory where the file is located. Then, run the following command:
+2. Install Tkinter: If you don't have Tkinter installed, you can install it using the appropriate package manager for your operating system.
 
-### *python agent.py*
+3. Set up the environment: Copy the code into a Python file (e.g., `economic_simulation.py`).
 
+4. Run the program: Execute the Python file using the command `python economic_simulation.py` in a terminal or command prompt.
 
+5. GUI Interaction: Once the GUI window appears, click the "Start Simulation" button to run the simulation. After the simulation finishes, the agent information will be displayed in the text box.
+
+Note: You can modify the program by changing the initial agent attributes, adding or removing agents, adjusting simulation parameters, or enhancing the GUI as needed.
+
+## Requirements
+
+This program requires Python and the following libraries:
+- `random`
+- `decimal`
+- `tkinter`
+
+Make sure you have these libraries installed before running the program.
